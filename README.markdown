@@ -17,6 +17,7 @@ configuring both `gitbot.rb` and `post-receive` to use the same fifo (default is
 `/tmp/gitbotfifo`), the bot will announce new commits that are pushed to the
 repo(s) which use the post-receive hook. You probably want to run the bot inside
 GNU screen or similar.
+`gitbot.rb` will attempt to create the fifo if it does not exist.
 
 The IRC code is based on a bot by Kevin Glowacz:
 <http://kevin.glowacz.info/2009/03/simple-irc-bot-in-ruby.html>.
