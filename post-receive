@@ -16,6 +16,6 @@ num=$(git log --pretty=oneline ${1}..${2}|wc -l)
 branch=${3/refs\/heads\//}
 repo=$(basename `pwd`)
 
-echo "7${num} commit(s) pushed to ${repo} on branch '${branch}':" > $fifo
+echo "7 ${num} commit(s) pushed to ${repo} on branch '${branch}':" > $fifo
 git log --pretty=format:"3%h by %an:  %s%n" ${1}..${2} > $fifo
 exit 0
